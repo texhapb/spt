@@ -1,0 +1,130 @@
+object Form1: TForm1
+  Left = 290
+  Height = 300
+  Top = 175
+  Width = 360
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = bsSingle
+  Caption = 'SimpleBookReader'
+  ClientHeight = 273
+  ClientWidth = 360
+  Menu = MainMenu1
+  LCLVersion = '0.9.28.2'
+  object ListBox1: TListBox
+    Left = 8
+    Height = 160
+    Top = 32
+    Width = 304
+    ItemHeight = 0
+    TabOrder = 1
+    TopIndex = -1
+  end
+  object DirectoryEdit1: TDirectoryEdit
+    Left = 8
+    Height = 25
+    Top = 232
+    Width = 280
+    ShowHidden = False
+    ButtonWidth = 23
+    NumGlyphs = 0
+    TabOrder = 2
+  end
+  object ToolBar1: TToolBar
+    Left = 0
+    Height = 26
+    Top = 0
+    Width = 360
+    Caption = 'ToolBar1'
+    EdgeBorders = [ebTop, ebBottom]
+    Images = ImageList1
+    TabOrder = 0
+    object tbAdd: TToolButton
+      Left = 1
+      Top = 2
+      Action = aAdd
+    end
+    object ToolButton2: TToolButton
+      Left = 24
+      Top = 2
+      Action = aDelete
+    end
+    object ToolButton3: TToolButton
+      Left = 47
+      Top = 2
+      Width = 8
+      AutoSize = True
+      Caption = 'tbSeparator1'
+      Style = tbsSeparator
+    end
+    object ToolButton4: TToolButton
+      Left = 55
+      Top = 2
+      Action = aGo
+    end
+  end
+  object ComboBox1: TComboBox
+    Left = 8
+    Height = 27
+    Top = 200
+    Width = 304
+    ItemHeight = 0
+    TabOrder = 3
+    Text = 'ComboBox1'
+  end
+  object BitBtn1: TBitBtn
+    Left = 320
+    Height = 30
+    Top = 32
+    Width = 32
+    Action = aAdd
+    TabOrder = 4
+  end
+  object BitBtn2: TBitBtn
+    Left = 320
+    Height = 30
+    Top = 83
+    Width = 32
+    Action = aDelete
+    TabOrder = 5
+  end
+  object BitBtn3: TBitBtn
+    Left = 320
+    Height = 30
+    Top = 232
+    Width = 32
+    Action = aGo
+    TabOrder = 6
+  end
+  object MainMenu1: TMainMenu
+    left = 88
+    top = 208
+    object miFile: TMenuItem
+      Caption = '&Файл'
+      object miExit: TMenuItem
+        Caption = 'Выход'
+        OnClick = miExitClick
+      end
+    end
+  end
+  object ActionList1: TActionList
+    Images = ImageList1
+    left = 161
+    top = 208
+    object aAdd: TAction
+      Caption = '+'
+    end
+    object aDelete: TAction
+      Caption = '-'
+    end
+    object aGo: TAction
+      Caption = 'Go'
+    end
+    object aExit: TAction
+      Caption = 'Exit'
+    end
+  end
+  object ImageList1: TImageList
+    left = 200
+    top = 208
+  end
+end
