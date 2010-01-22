@@ -128,5 +128,5 @@ foreach ($lines as $line) {
 	}
 	$state = $newstate;
 }
-
+var_dump($fnt->unknown);
 ?>
